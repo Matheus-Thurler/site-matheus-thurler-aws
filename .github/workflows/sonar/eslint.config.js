@@ -1,6 +1,6 @@
 export default [
     {
-      ignores: ["node_modules", "dist","tests"]
+      ignores: ["node_modules", "dist", "tests"]
     },
     {
       languageOptions: {
