@@ -18,6 +18,8 @@ jobs:
     uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-build.yml@master
     with:
       node-version: ${{ vars.node_version }}
+    secrets:
+      TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
 #  call-deploy:
 #    needs: call-build
 #    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-deploy.yml@master
