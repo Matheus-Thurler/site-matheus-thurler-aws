@@ -8,6 +8,7 @@ jobs:
     uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sonar.yml@master
     with:
       node-version: ${{ vars.node-version }}
+
 #  call-build:
 #    needs: call-sonar
 #    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-build.yml@master
