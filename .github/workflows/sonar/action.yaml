@@ -4,11 +4,14 @@ inputs:
   sonar-token:
     description: 'Token SonarCloud'
     required: true
+    default: ${{ secrets.SONAR_TOKEN }}
   sonar-organization:
     description: 'Organização SonarCloud'
+    default: ${{ secrets.SONAR_ORGANIZATION }}
     required: true
   sonar-project-key:
     description: 'Key SonarCloud'
+    default: ${{ secrets.SONAR_PROJECT_KEY }}
     required: true
 
 runs:
