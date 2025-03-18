@@ -12,10 +12,10 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    provider: 'v8',
     include: ['tests/**/*.{js,ts,vue}'],
     coverage: {
       reporter: ['html', 'lcov', 'text-summary'],
+      provider: 'v8',
     },
     exclude: ['node_modules'],
   },

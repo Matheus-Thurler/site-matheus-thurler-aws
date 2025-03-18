@@ -20,7 +20,6 @@ async function run() {
       -Dsonar.projectKey=${sonarProjectKey} \
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.login=${sonarToken} \
-      -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
       -Dsonar.qualitygate.wait=true`);
 
     core.info('aprovado!');
