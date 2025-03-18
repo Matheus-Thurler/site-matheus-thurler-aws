@@ -12,11 +12,12 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    provider: 'istanbul',
-    include: ['tests/unit/**/*.spec.js'],
+    provider: 'v8',
+    include: ['tests/**/*.{js,ts,vue}'],
     coverage: {
       reporter: ['html', 'lcov', 'text-summary'],
     },
+    exclude: ['node_modules'],
   },
 });
 
