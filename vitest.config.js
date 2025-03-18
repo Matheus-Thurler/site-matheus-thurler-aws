@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [vue()], // Adiciona o suporte para arquivos .vue
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './'),
@@ -13,5 +13,10 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     include: ['tests/unit/**/*.spec.js'],
+    coverage: {
+      reporter: ['html', 'lcov', 'text-summary'],
+    },
   },
 });
+
+
