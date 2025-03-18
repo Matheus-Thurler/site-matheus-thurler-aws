@@ -15,13 +15,12 @@ async function run() {
     await exec('npm install -g sonarqube-scanner');
 
     core.info('Rodando SonarScanner');
-    await exec(`sonar-scanner \
-      -Dsonar.organization=${sonarOrganization} \
+    await exec(`sonar-scanner -Dsonar.organization=${sonarOrganization} \
       -Dsonar.projectKey=${sonarProjectKey} \
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.login=${sonarToken} \
-      -Dsonar.exclusions=**/tests/**\
-      -Dsonar.inclusions=pages/santander/index.vue \\
+      -Dsonar.exclusions=**/tests/** \
+      -Dsonar.inclusions=pages/santander/index.vue \
       -Dsonar.qualitygate.wait=true`);
 
     core.info('aprovado!');
