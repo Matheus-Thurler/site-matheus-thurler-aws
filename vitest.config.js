@@ -12,6 +12,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
+    provider: 'istanbul',
     include: ['tests/unit/**/*.spec.js'],
     coverage: {
       reporter: ['html', 'lcov', 'text-summary'],
