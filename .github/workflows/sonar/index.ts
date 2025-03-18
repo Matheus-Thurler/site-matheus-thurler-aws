@@ -21,7 +21,7 @@ async function run() {
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.login=${sonarToken} \
       -Dsonar.inclusions=pages/santander/index.vue \
-      -Dsonar.qualitygate.wait=false`);
+      -Dsonar.qualitygate.wait=true`);
 
     core.info('aprovado!');
   } catch (error) {
