@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html, body {
+        @apply dark:bg-gray-800;
+        height: 100%;
+    }
+
+    /*.wrapper {*/
+    /*    min-height: calc(100% - 4rem);*/
+    /* }*/
+    h1, h2, h3, strong, ul, code, li, p {
+    @apply dark:text-white;
+  }
+    pre {
+        @apply dark:bg-gray-900
+    }
+}
+
+/*@-moz-document url-prefix() {*/
+/*    body {*/
+/*      margin-bottom: -100px;*/
+/*    }*/
+/*  }*/
