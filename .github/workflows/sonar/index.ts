@@ -9,7 +9,7 @@ async function run() {
     const sonarProjectKey = core.getInput('sonar-project-key');
 
     core.info('Executando ESLint');
-    await exec('npx eslint . --config .github/workflows/sonar/eslint.config.js || true);
+    await exec('npx eslint . --config .github/workflows/sonar/eslint.config.js || true');
 
     core.info('Instalando SonarScanner');
     await exec('npm install -g sonarqube-scanner');
