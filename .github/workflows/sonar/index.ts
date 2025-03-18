@@ -20,7 +20,6 @@ async function run() {
       -Dsonar.projectKey=${sonarProjectKey} \
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.login=${sonarToken} \
-      -Dsonar.exclusions=**/tests/** \
       -Dsonar.inclusions=pages/santander/index.vue \
       -Dsonar.qualitygate.wait=true`);
 
