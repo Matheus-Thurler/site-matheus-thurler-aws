@@ -1,0 +1,21 @@
+name: sta-build-deploy-release.yml
+on:
+  push:
+    branches:
+      - master
+jobs:
+  call-sonar:
+    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sonar.yaml@latest
+    with:
+      node-version: ${{ vars.node-version }}
+  call-build:
+    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-build.yaml@latest
+    with:
+      node-version: ${{ vars.node-version }}
+  call-deploy:
+    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-deploy.yaml@latest
+    with:
+      AWS_ACCESS_KEY: ${{ vars.AWS_ACCESS_KEY }}
+      AWS_SECRET_KEY: ${{ vars.AWS_SECRET_KEY }}
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      AWS_S3_BUCKET_NAME: ${{ vars.AWS_S3_BUCKET_NAME }}
