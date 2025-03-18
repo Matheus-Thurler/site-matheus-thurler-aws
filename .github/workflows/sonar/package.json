@@ -1,0 +1,21 @@
+{
+    "name": "sonar-action",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "GitHub Action para executar SonarCloud",
+    "main": "index.js",
+    "scripts": {
+      "build": "tsc",
+      "lint": "eslint . --ext .ts",
+      "test": "echo 'Nenhum teste implementado'"
+    },
+    "dependencies": {
+      "@actions/core": "^1.10.0",
+      "@actions/exec": "^1.1.1"
+    },
+    "devDependencies": {
+      "typescript": "^4.9.4",
+      "eslint": "^8.0.1",
+      "@types/node": "^18.0.0"
+    }
+  }
