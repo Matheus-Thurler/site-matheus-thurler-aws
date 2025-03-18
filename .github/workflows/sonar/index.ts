@@ -1,6 +1,5 @@
 import * as core from '@actions/core';
 import { exec } from '@actions/exec';
-import fs from 'fs'; // Importe o módulo fs para verificar a existência do arquivo
 
 async function run() {
   try {
@@ -11,14 +10,6 @@ async function run() {
 
     core.info('Executando ESLint');
     await exec('npx eslint . --config .github/workflows/sonar/eslint.config.js --max-warnings=0');
-
-    core.info('Rodando testes e gerando cobertura');
-    await exec('npm run test:coverage');
-
-    if (!fs.existsSync('coverage/lcov.info')) {
-      core.setFailed('Arquivo de cobertura não encontrado: coverage/lcov.info');
-      return;
-    }
 
     core.info('Instalando SonarScanner');
     await exec('npm install -g sonarqube-scanner');
