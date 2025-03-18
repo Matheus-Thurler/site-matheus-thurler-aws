@@ -22,7 +22,7 @@ async function run() {
       -Dsonar.login=${sonarToken} \
       -Dsonar.exclusions=**/tests/**\
       -Dsonar.inclusions=pages/santander/index.vue \\
-      -Dsonar.qualitygate.wait=false`);
+      -Dsonar.qualitygate.wait=true`);
 
     core.info('aprovado!');
   } catch (error) {
