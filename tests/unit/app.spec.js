@@ -37,4 +37,12 @@ describe('Santander Page', () => {
 
     expect(wrapper.emitted().clicked).toBeTruthy();
   });
+
+  it('renders the component correctly', () => {
+    // Verificando se o componente foi montado
+    expect(wrapper.exists()).toBe(true);
+  });
+
+
+
 });

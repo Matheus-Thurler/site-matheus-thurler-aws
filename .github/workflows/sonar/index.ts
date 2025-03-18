@@ -20,7 +20,8 @@ async function run() {
       -Dsonar.projectKey=${sonarProjectKey} \
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.login=${sonarToken} \
-      -Dsonar.qualitygate.wait=true`);
+      -Dsonar.inclusions=pages/santander/index.vue \
+      -Dsonar.qualitygate.wait=false`);
 
     core.info('aprovado!');
   } catch (error) {

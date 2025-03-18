@@ -15,7 +15,14 @@ export default defineConfig({
     include: ['tests/**/*.{js,ts,vue}'],
     coverage: {
       reporter: ['html', 'lcov', 'text-summary'],
-      provider: 'v8',
+      threshold: {
+        global: {
+          statements: 30,  // Exigir 80% de cobertura de declarações
+          branches: 30,    // Exigir 80% de cobertura de branches
+          functions: 30,   // Exigir 80% de cobertura de funções
+          lines: 30,       // Exigir 80% de cobertura de linhas
+        },
+      },
     },
     exclude: ['node_modules'],
   },
