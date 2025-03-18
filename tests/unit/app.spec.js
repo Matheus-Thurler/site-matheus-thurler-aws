@@ -9,40 +9,26 @@ describe('Santander Page', () => {
     wrapper = mount(Santander);
   });
 
-  it('renders the correct text in the header', async () => {
-    // Adiciona uma pausa de 1 segundo
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
+  it('renders the correct text in the header', () => {
     const header = wrapper.find('h1');
     expect(header.exists()).toBe(true);
     expect(header.text()).toBe('Santander');
   });
 
-  it('renders the correct button text', async () => {
-    // Adiciona uma pausa de 1 segundo
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
+  it('renders the correct button text', () => {
     const button = wrapper.find('button');
     expect(button.exists()).toBe(true);
     expect(button.text()).toBe('Click me');
   });
 
-  it('emits an event when the button is clicked', async () => {
-    // Adiciona uma pausa de 1 segundo
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    // Simula o clique no botão
+  it('emits the "clicked" event when the button is clicked', async () => {
     const button = wrapper.find('button');
     await button.trigger('click');
-
     expect(wrapper.emitted().clicked).toBeTruthy();
+    expect(wrapper.emitted().clicked.length).toBe(1); // Verifica se o evento foi emitido apenas uma vez
   });
 
   it('renders the component correctly', () => {
-    // Verificando se o componente foi montado
     expect(wrapper.exists()).toBe(true);
   });
-
-
-
 });
