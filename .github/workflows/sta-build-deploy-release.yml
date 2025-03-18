@@ -5,15 +5,17 @@ on:
       - master
 jobs:
   call-sonar:
-    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sonar.yaml@latest
+    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sonar.yaml@master
     with:
       node-version: ${{ vars.node-version }}
   call-build:
-    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-build.yaml@latest
+    needs: call-sonar
+    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-build.yaml@master
     with:
       node-version: ${{ vars.node-version }}
   call-deploy:
-    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-deploy.yaml@latest
+    needs: call-build
+    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-deploy.yaml@master
     with:
       AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
       AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
