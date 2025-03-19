@@ -25,7 +25,7 @@ describe('Santander Page', () => {
     const button = wrapper.find('button');
     await button.trigger('click');
     expect(wrapper.emitted().clicked).toBeTruthy();
-    expect(wrapper.emitted().clicked.length).toBe(1); // Verifica se o evento foi emitido apenas uma vez
+    expect(wrapper.emitted().clicked.length).toBe(1);
   });
 
   it('renders the component correctly', () => {
