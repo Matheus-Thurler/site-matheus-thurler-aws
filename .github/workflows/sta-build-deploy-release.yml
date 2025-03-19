@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - dev
 jobs:
 #  call-sonar:
 #    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sonar.yml@master
