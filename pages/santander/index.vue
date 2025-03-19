@@ -4,6 +4,13 @@
       <h1>Santander</h1>
       <button @click="handleClick" type="button" aria-label="Clique para ação">Click me</button>
     </div>
+<!--    <NuxtImg-->
+<!--          class="h-40 w-40"-->
+<!--          src="/santander.png"-->
+<!--          alt="santander"-->
+<!--          quality="100"-->
+<!--          format="png"-->
+<!--    />-->
   </div>
 </template>
 

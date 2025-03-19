@@ -7,7 +7,7 @@
           alt="Matheus Thurler"
           quality="100"
           format="png"
-        />
+    />
     </div>
     <div class="text-center">
       <h1 class="mb-4 text-lg font-extrabold leading-10 tracking-tight sm:text-5xl sm:leading-none md:text-6xl">
