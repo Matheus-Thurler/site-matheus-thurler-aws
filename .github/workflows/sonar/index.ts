@@ -21,6 +21,7 @@ async function run() {
       -Dsonar.host.url=https://sonarcloud.io \
       -Dsonar.login=${sonarToken} \
       -Dsonar.inclusions=pages/santander/index.vue \
+      -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
       -Dsonar.qualitygate.wait=true`);
 
     core.info('aprovado!');
