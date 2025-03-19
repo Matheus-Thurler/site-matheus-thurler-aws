@@ -5,21 +5,24 @@ on:
       - master
       - dev
 jobs:
-  call-sonar:
-    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sonar.yml@master
-    with:
-      node-version: ${{ vars.node_version }}
-    secrets:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
-      SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
+#  call-sonar:
+#    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sonar.yml@master
+#    with:
+#      node-version: ${{ vars.node_version }}
+#    secrets:
+#      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#      SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
+#      SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
   call-build:
-    needs: call-sonar
+#    needs: call-sonar
     uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-build.yml@master
     with:
       node-version: ${{ vars.node_version }}
     secrets:
       TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_ORGANIZATION: ${{ secrets.SONAR_ORGANIZATION }}
+      SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
   call-deploy:
     needs: call-build
     uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-deploy.yml@master
