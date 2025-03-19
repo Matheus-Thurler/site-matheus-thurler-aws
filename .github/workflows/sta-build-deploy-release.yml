@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - dev
 jobs:
   call-build:
     uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-build.yml@master
