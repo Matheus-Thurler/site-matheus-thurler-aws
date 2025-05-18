@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   call-build:
-    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-build.yml@master
+    uses: Matheus-Thurler/reusable-workflows/.github/workflows/sta-build.yml@master
     with:
       node-version: ${{ vars.node_version }}
     secrets:
@@ -15,7 +15,7 @@ jobs:
       SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
   call-deploy:
     needs: call-build
-    uses: Matheus-Thurler/teste-nttdata-template/.github/workflows/sta-deploy.yml@master
+    uses: Matheus-Thurler/reusable-workflows/.github/workflows/sta-deploy.yml@master
     secrets:
       AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
       AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
