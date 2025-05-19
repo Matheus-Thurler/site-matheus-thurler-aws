@@ -17,7 +17,6 @@ export default defineNuxtConfig({
    '@nuxt/image-edge',
    '@stefanobartoletti/nuxt-social-share',
    '@nuxtjs/html-validator',
-   '@nuxt/test-utils/module'
   ],
 
   colorMode: {

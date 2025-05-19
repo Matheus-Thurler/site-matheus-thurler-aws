@@ -10,4 +10,4 @@ dist
 .idea
 .composables/*
 ./images
-./coverage
+./script.sh
