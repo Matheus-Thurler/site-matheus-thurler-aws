@@ -23,8 +23,8 @@
 
     <!-- Ícones de Redes Sociais e Tema (Visível em Desktop, Oculto em Mobile) -->
     <div class="hidden md:flex space-x-5 items-center">
-      <a target="_blank" href="https://gitlab.com/matheusthurler" class="hover:text-gray-400">
-        <Icon size="24" name="uil:gitlab" />
+      <a target="_blank" href="https://github.com/Matheus-Thurler" class="hover:text-gray-400">
+        <Icon size="24" name="uil:github" />
       </a>
       <a target="_blank" href="https://www.linkedin.com/in/matheus-thurler-34519870/" class="hover:text-gray-400">
         <Icon size="24" name="uil:linkedin" />
