@@ -3,7 +3,7 @@
     <div class="flex mx-auto w-full justify-center">
     <NuxtImg
           class="rounded-full border-white border h-40 w-40"
-          src="/matheus.png"
+          src="/matheus-summit.jpg"
           alt="Matheus Thurler"
           quality="100"
           format="png"
