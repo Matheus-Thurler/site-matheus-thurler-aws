@@ -5,7 +5,7 @@
      </nuxt-link>
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2 text-gray-200">
-        <nuxt-link :to="path" class="uppercase tracking-wide text-sm text-indigo-500 font-semibold hover:underline">
+        <nuxt-link :to="path" class="uppercase tracking-wide text-sm text-indigo-500 font-semibold hover:underline foregrou">
           {{ title }}
         </nuxt-link>
       </div>

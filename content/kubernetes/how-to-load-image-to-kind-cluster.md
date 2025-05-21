@@ -1,5 +1,5 @@
 ---
-title: Easily Load Docker Images into Your Kind Kubernetes Cluster
+title: Load Docker Images into Your Kind Kubernetes Cluster
 slug: load-docker-images-kind-kubernetes-cluster
 tag: Kubernetes, Kind, Docker, local development, kubectl
 description: A step-by-step guide on how to build Docker images and load them into your local Kind (Kubernetes in Docker) cluster for testing and development.

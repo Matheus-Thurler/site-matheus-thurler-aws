@@ -1,5 +1,5 @@
 ---
-title: Kubernetes Commands You Should Know
+title: K8S Commands You Should Know
 slug: kubernetes-commands-you-should-know
 tag: kubernetes
 description: Kubernetes Commands You Should Know
