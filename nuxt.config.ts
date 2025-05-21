@@ -1,5 +1,19 @@
+import { name } from "happy-dom/lib/PropertySymbol.js";
+
 export default defineNuxtConfig({
-  ssr: true,
+  app: 
+    {
+      head: {
+        htmlAttrs: {
+        lang: 'en' 
+        }
+      }
+    },
+    ssr: true,
+    site: {
+      url: 'https://matheusthurler.com.br',
+      name: 'My personal Website'
+    },
 
   tailwindcss: {
    cssPath: '~/assets/css/main.css',
