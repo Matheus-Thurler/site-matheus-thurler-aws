@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   modules: [
    '@nuxtjs/sitemap',
    '@nuxtjs/tailwindcss',
+   '@nuxtjs/robots',
    '@nuxt/content',
    '@nuxtjs/color-mode',
    'nuxt-gtag',
@@ -31,7 +32,7 @@ export default defineNuxtConfig({
    '@nuxt/image-edge',
    '@stefanobartoletti/nuxt-social-share',
    '@nuxtjs/html-validator',
-   '@nuxt/test-utils/module'
+   '@nuxt/test-utils/module',
   ],
 
   colorMode: {
