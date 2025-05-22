@@ -40,7 +40,10 @@ export default defineNuxtConfig({
   },
 
   gtag: {
-      id: 'G-G73F8VFQNC'
+      id: 'G-G73F8VFQNC',
+      config: {
+        cookie_domain: 'auto',
+      }
 },
 
   socialShare: {
